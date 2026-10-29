@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS raw_jobs (
+    raw_id                BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    job_title_short       TEXT,
+    job_title             TEXT,
+    job_location          TEXT,
+    job_via               TEXT,
+    job_schedule_type     TEXT,
+    job_work_from_home    BOOLEAN,
+    search_location       TEXT,
+    job_posted_date       TIMESTAMP,
+    job_no_degree_mention BOOLEAN,
+    job_health_insurance  BOOLEAN,
+    job_country           TEXT,
+    salary_rate           TEXT,
+    salary_year_avg       NUMERIC(14, 2),
+    salary_hour_avg       NUMERIC(10, 2),
+    company_name          TEXT,
+    job_skills            TEXT[],
+    job_type_skills       JSONB
+);
