@@ -1,8 +1,10 @@
 """CSV crudo -> DataFrame tipado con las columnas de raw_jobs."""
-from __future__ import annotations
-import pandas as pd
-from pipeline.parsing import clean_lower, clean_text, parse_dict, parse_list, to_bool
 
+from __future__ import annotations
+
+import pandas as pd
+
+from pipeline.parsing import clean_lower, clean_text, parse_dict, parse_list, to_bool
 
 COLUMNS = [
     "job_title_short",

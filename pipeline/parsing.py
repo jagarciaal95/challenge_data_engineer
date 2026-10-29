@@ -1,4 +1,5 @@
 """Funciones puras de parseo y limpieza."""
+
 from __future__ import annotations
 
 import ast
@@ -77,7 +78,7 @@ def _clean_items(items: Any) -> list[str]:
 
 
 def parse_list(value: Any) -> list[str] | None:
-    """"['python', 'sql']" -> ['python', 'sql']"""
+    """ "['python', 'sql']" -> ['python', 'sql']"""
     if is_missing(value):
         return None
     parsed = _literal(value)
@@ -87,7 +88,7 @@ def parse_list(value: Any) -> list[str] | None:
 
 
 def parse_dict(value: Any) -> dict[str, list[str]] | None:
-    """"{'programming': ['python']}" -> {'programming': ['python']}"""
+    """ "{'programming': ['python']}" -> {'programming': ['python']}"""
     if is_missing(value):
         return None
     parsed = _literal(value)

@@ -1,4 +1,5 @@
 """Configuración leída desde variables de entorno (.env). Sin credenciales en el código."""
+
 from __future__ import annotations
 
 import os
@@ -11,6 +12,8 @@ from psycopg.conninfo import make_conninfo
 ROOT = Path(__file__).resolve().parents[1]
 SQL_DIR = ROOT / "sql"
 RAW_DDL_FILE = SQL_DIR / "raw_jobs.sql"
+SCHEMA_FILE = SQL_DIR / "schema.sql"
+TRANSFORM_FILE = SQL_DIR / "transform_3nf.sql"
 
 REQUIRED_VARS = ("POSTGRES_USER", "POSTGRES_PASSWORD", "POSTGRES_DB")
 

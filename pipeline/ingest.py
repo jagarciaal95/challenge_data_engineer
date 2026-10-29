@@ -1,19 +1,37 @@
 from __future__ import annotations
+
 import logging
 from collections.abc import Iterator
 from pathlib import Path
 from typing import Any
+
 import pandas as pd
 import psycopg
 from psycopg.types.json import Jsonb
+
 from pipeline.clean import COLUMNS, prepare_chunk
 from pipeline.validate import validate_chunk
 
 log = logging.getLogger(__name__)
 
 COPY_TYPES = [
-    "text", "text", "text", "text", "text", "bool", "text", "timestamp", "bool", "bool",
-    "text", "text", "float8", "float8", "text", "text[]", "jsonb",
+    "text",
+    "text",
+    "text",
+    "text",
+    "text",
+    "bool",
+    "text",
+    "timestamp",
+    "bool",
+    "bool",
+    "text",
+    "text",
+    "float8",
+    "float8",
+    "text",
+    "text[]",
+    "jsonb",
 ]
 
 
