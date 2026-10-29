@@ -23,7 +23,7 @@ def text(nullable: bool = True) -> pa.Column:
 SCHEMA = pa.DataFrameSchema(
     {
         "job_title_short": text(),
-        "job_title": text(nullable=False),
+        "job_title": text(),
         "job_location": text(),
         "job_via": text(),
         "job_schedule_type": text(),
