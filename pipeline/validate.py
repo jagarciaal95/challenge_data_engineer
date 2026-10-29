@@ -1,4 +1,5 @@
 """Validación de cada chunk con Pandera antes de cargarlo."""
+
 from __future__ import annotations
 
 import logging
