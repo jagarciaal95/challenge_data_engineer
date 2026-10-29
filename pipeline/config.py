@@ -4,13 +4,13 @@ from __future__ import annotations
 import os
 from dataclasses import dataclass, field
 from pathlib import Path
-
 from dotenv import load_dotenv
 from psycopg.conninfo import make_conninfo
 
 ROOT = Path(__file__).resolve().parents[1]
 SQL_DIR = ROOT / "sql"
 RAW_DDL_FILE = SQL_DIR / "raw_jobs.sql"
+SCHEMA_FILE = SQL_DIR / "schema.sql"
 
 REQUIRED_VARS = ("POSTGRES_USER", "POSTGRES_PASSWORD", "POSTGRES_DB")
 
